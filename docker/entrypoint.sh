@@ -14,7 +14,7 @@ rm -rf /var/www/html/*
 cp /speedtest/*.js /var/www/html/
 
 # Copy favicon
-cp /speedtest/favicon.ico /var/www/html/
+# cp /speedtest/favicon.ico /var/www/html/
 
 # Set custom webroot on alpine
 if is_alpine; then
