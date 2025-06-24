@@ -93,8 +93,8 @@ function initServers(){
 }
 
 var meterBk=/Trident.*rv:(\d+\.\d+)/i.test(navigator.userAgent)?"#EAEAEA":"#80808040";
-var dlColor="#6060AA",
-	ulColor="#616161";
+var dlColor="#6afff3",
+	ulColor="#bf71ff";
 var progColor=meterBk;
 
 //CODE FOR GAUGES
@@ -242,7 +242,8 @@ function initUI(){
 	#startStopBtn{
 		display:inline-block;
 		margin:0 auto;
-		color:#6060AA;
+		color: rgb(75, 170, 75);
+		font-weight: 750;
 		background-color:rgba(0,0,0,0);
 		border:0.15em solid rgb(75, 170, 75);
 		border-radius:0.3em;
@@ -254,12 +255,13 @@ function initUI(){
 		box-shadow: 0 0 0 rgba(0,0,0,0.1), inset 0 0 0 rgba(0,0,0,0.1);
 	}
 	#startStopBtn:hover{
-		box-shadow: 0 0 2em rgba(0,0,0,0.1), inset 0 0 1em rgba(0,0,0,0.1);
+		color: #000;
+		background: rgb(75, 170, 75);
 	}
 	#startStopBtn.running{
-		background-color:#FF3030;
-		border-color:#FF6060;
-		color:#FFFFFF;
+		background-color: rgb(202, 89, 89);
+		border-color: rgb(202, 89, 89);
+		color: #FFFFFF;
 	}
 	#startStopBtn:before{
 		content:"Start";
@@ -436,7 +438,6 @@ function initUI(){
 	<p id="message"><span class="loadCircle"></span>Selecting a server...</p>
 </div>
 <div id="testWrapper" class="hidden">
-	<div id="startStopBtn" onclick="startStop()"></div><br/>
 	<?php if(getenv("TELEMETRY")=="true"){ ?>
 		<a class="privacy" href="#" onclick="I('privacyPolicy').style.display=''">Privacy</a>
 	<?php } ?>
@@ -447,12 +448,12 @@ function initUI(){
 		<div class="testGroup">
             <div class="testArea2">
 				<div class="testName">Ping</div>
-				<div id="pingText" class="meterText" style="color:#AA6060"></div>
+				<div id="pingText" class="meterText" style="color:#adb03d"></div>
 				<div class="unit">ms</div>
 			</div>
 			<div class="testArea2">
 				<div class="testName">Jitter</div>
-				<div id="jitText" class="meterText" style="color:#AA6060"></div>
+				<div id="jitText" class="meterText" style="color:#296ad6"></div>
 				<div class="unit">ms</div>
 			</div>
 		</div>
@@ -480,6 +481,7 @@ function initUI(){
 			<img src="" id="resultsImg" />
 		</div>
 	</div>
+	<div id="startStopBtn" onclick="startStop()"></div><br/>
 </div>
 <div id="privacyPolicy" style="display:none">
 </div>
