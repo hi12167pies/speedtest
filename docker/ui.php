@@ -244,7 +244,7 @@ function initUI(){
 		margin:0 auto;
 		color:#6060AA;
 		background-color:rgba(0,0,0,0);
-		border:0.15em solid #6060FF;
+		border:0.15em solid rgb(75, 170, 75);
 		border-radius:0.3em;
 		transition:all 0.3s;
 		box-sizing:border-box;
@@ -410,7 +410,7 @@ function initUI(){
 	}
 	@media all and (prefers-color-scheme: dark){
 		html,body,#loading{
-			background:#202020;
+			background:#111;
 			color:#F4F4F4;
 			color-scheme:dark;
 		}
@@ -461,13 +461,13 @@ function initUI(){
 				<div class="testName">Download</div>
 				<canvas id="dlMeter" class="meter"></canvas>
 				<div id="dlText" class="meterText"></div>
-				<div class="unit">Mbit/s</div>
+				<div class="unit">MB/s</div>
 			</div>
 			<div class="testArea">
 				<div class="testName">Upload</div>
 				<canvas id="ulMeter" class="meter"></canvas>
 				<div id="ulText" class="meterText"></div>
-				<div class="unit">Mbit/s</div>
+				<div class="unit">MB/s</div>
 			</div>
 		</div>
 		<div id="ipArea">
@@ -480,48 +480,8 @@ function initUI(){
 			<img src="" id="resultsImg" />
 		</div>
 	</div>
-	<a href="https://github.com/librespeed/speedtest">Source code</a>
 </div>
 <div id="privacyPolicy" style="display:none">
-    <h2>Privacy Policy</h2>
-    <p>This HTML5 speed test server is configured with telemetry enabled.</p>
-    <h4>What data we collect</h4>
-    <p>
-        At the end of the test, the following data is collected and stored:
-        <ul>
-            <li>Test ID</li>
-            <li>Time of testing</li>
-            <li>Test results (download and upload speed, ping and jitter)</li>
-            <li>IP address</li>
-            <li>ISP information</li>
-            <li>Approximate location (inferred from IP address, not GPS)</li>
-            <li>User agent and browser locale</li>
-            <li>Test log (contains no personal information)</li>
-        </ul>
-    </p>
-    <h4>How we use the data</h4>
-    <p>
-        Data collected through this service is used to:
-        <ul>
-            <li>Allow sharing of test results (sharable image for forums, etc.)</li>
-            <li>To improve the service offered to you (for instance, to detect problems on our side)</li>
-        </ul>
-        No personal information is disclosed to third parties.
-    </p>
-    <h4>Your consent</h4>
-    <p>
-        By starting the test, you consent to the terms of this privacy policy.
-    </p>
-    <h4>Data removal</h4>
-    <p>
-        If you want to have your information deleted, you need to provide either the ID of the test or your IP address. This is the only way to identify your data, without this information we won't be able to comply with your request.<br/><br/>
-        Contact this email address for all deletion requests: <a href="mailto:<?=getenv("EMAIL") ?>"><?=getenv("EMAIL") ?></a>.
-    </p>
-    <br/><br/>
-    <div class="closePrivacyPolicy">
-        <a class="privacy" href="#" onclick="I('privacyPolicy').style.display='none'">Close</a>
-    </div>
-    <br/>
 </div>
 </body>
 </html>
