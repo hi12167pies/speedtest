@@ -94,7 +94,7 @@ function initServers(){
 
 var meterBk=/Trident.*rv:(\d+\.\d+)/i.test(navigator.userAgent)?"#EAEAEA":"#80808040";
 var dlColor="#529dc7",
-	ulColor="#ff71e3";
+	ulColor="#aa4b97";
 var progColor=meterBk;
 
 //CODE FOR GAUGES
@@ -472,7 +472,7 @@ function initUI(){
 			</div>
 		</div>
 		<div id="startStopBtn" onclick="startStop()"></div><br/>
-
+		<br><br>
 		<div id="ipArea">
 			<span id="ip"></span>
 		</div>
