@@ -93,8 +93,8 @@ function initServers(){
 }
 
 var meterBk=/Trident.*rv:(\d+\.\d+)/i.test(navigator.userAgent)?"#EAEAEA":"#80808040";
-var dlColor="#6afff3",
-	ulColor="#bf71ff";
+var dlColor="#529dc7",
+	ulColor="#ff71e3";
 var progColor=meterBk;
 
 //CODE FOR GAUGES
@@ -264,10 +264,10 @@ function initUI(){
 		color: #FFFFFF;
 	}
 	#startStopBtn:before{
-		content:"Start";
+		content:"Go";
 	}
 	#startStopBtn.running:before{
-		content:"Abort";
+		content:"Stop";
 	}
 	#serverArea{
 		margin-top:1em;
@@ -448,12 +448,12 @@ function initUI(){
 		<div class="testGroup">
             <div class="testArea2">
 				<div class="testName">Ping</div>
-				<div id="pingText" class="meterText" style="color:#adb03d"></div>
+				<div id="pingText" class="meterText" style="color: #8b8b8b"></div>
 				<div class="unit">ms</div>
 			</div>
 			<div class="testArea2">
 				<div class="testName">Jitter</div>
-				<div id="jitText" class="meterText" style="color:#296ad6"></div>
+				<div id="jitText" class="meterText" style="color: #8b8b8b"></div>
 				<div class="unit">ms</div>
 			</div>
 		</div>
@@ -471,6 +471,8 @@ function initUI(){
 				<div class="unit">MB/s</div>
 			</div>
 		</div>
+		<div id="startStopBtn" onclick="startStop()"></div><br/>
+
 		<div id="ipArea">
 			<span id="ip"></span>
 		</div>
@@ -481,7 +483,6 @@ function initUI(){
 			<img src="" id="resultsImg" />
 		</div>
 	</div>
-	<div id="startStopBtn" onclick="startStop()"></div><br/>
 </div>
 <div id="privacyPolicy" style="display:none">
 </div>
